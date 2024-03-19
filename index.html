@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
+        :root {
+            --primary-color: #dfa20a;
+            --secondary-color: #f5f2fe;
+            --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .pc {
+            color: var(--primary-color);
+        }
+
+        body {
+            margin-top: 100px;
+        }
+
         h1,
         h2,
         h3 {
@@ -19,6 +33,7 @@
         }
 
         h2 {
+
             font-size: 48px;
         }
 
@@ -31,14 +46,110 @@
             font-size: 18px;
             line-height: 1.5;
         }
+
+        .primary-link {
+            border-radius: 4px;
+            padding: 20px 15px;
+            text-decoration: none;
+            text-transform: capitalize;
+            background: var(--primary-color);
+            box-shadow: var(--box-shadow);
+            color: white;
+        }
+
+        .secondary-link {
+            border-radius: 4px;
+            padding: 20px 15px;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .primary-link:hover {
+            color: white;
+        }
+
+        .navigation-links {
+            margin: 70px;
+        }
     </style>
 </head>
 
 <body>
-    <h2 class="text-center">&#x1F44B; Hi, I am</h2>
-    <h1 class="text-center">Eden</h1>
-    <h3 class="text-center">&#x1F1EA;&#x1F1F9; Front-end developer, based in Ethiopia, Addis Ababa</h3>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Eden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html#contact">Contact me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">&#x1F44B; Hi, I am</h2>
+        <h1 class="text-center">Eden</h1>
+        <h3 class="text-center">&#x1F1EA;&#x1F1F9; Front-end developer, based in Ethiopia, Addis Ababa</h3>
+        <div class="text-center navigation-links">
+            <a href="about.html#contact" class="mr-3 primary-link">Contact Me</a>
+            <a href="about.html" class="ml-3 secondary-link">About Me</a>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <img src="images/pexels-kelvin-valerio-810775.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-6">
+                <h2 class="pc mb-3">Meditation</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente non tempore repellendus reiciendis
+                    labore, inventore doloribus vitae velit excepturi quod dignissimos eveniet rem distinctio quasi at
+                    nihil, libero hic a!</p>
+                <div class="mt-5"><a href="#" class="primary-link">Read More</a></div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+                <h2 class="pc mb-3">Yoga</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, laboriosam consequuntur! Autem
+                    inventore porro nulla nihil, repudiandae aut veritatis, doloribus atque recusandae maiores
+                    temporibus numquam nam! Maiores expedita at nesciunt.</p>
+                <div class="mt-5"><a href="#" class="primary-link">Read More</a></div>
 
+            </div>
+            <div class="col-6">
+                <img src="images/pexels-prasanth-inturi-1051838.jpg" class="img-fluid rounded">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class=" col-6">
+                <img src="images/pexels-li-sun-2294363.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-6">
+                <h2 class="pc mb-3">Exercise</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quaerat distinctio ad eligendi,
+                    perspiciatis consequatur atque, velit accusamus reprehenderit consectetur facilis libero dignissimos
+                    nemo quasi amet assumenda alias incidunt provident.</p>
+                <div class="mt-5"><a href="#" class="primary-link">Read More</a></div>
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
